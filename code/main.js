@@ -3,10 +3,10 @@ import kaboom from "kaboom";
 kaboom();
 
 
-loadSprite("birdy", "sprites/birdy.png");
-loadSprite("bg", "sprites/bg.png");
-loadSprite("pipe", "sprites/pipe.png");
-loadSound("wooosh", "sounds/wooosh.mp3");
+loadSprite("birdy", "/sprites/birdy.gif");
+loadSprite("bg", "/sprites/bg.png");
+loadSprite("pipe", "/sprites/pipe.png");
+loadSound("wooosh", "/sounds/wooosh.mp3");
 
 
 
@@ -97,8 +97,11 @@ scene("gameover", (score) => {
       "gameover!\n"
       + "score: " + score
       + "\nhigh score: " + highScore,
-      { size: 45 }
-    )
+      { size: 95 }
+    ),
+    pos(width() / 2, height() / 2),
+    scale(2),
+
   ]);
 
   onKeyPress("space", () => {
